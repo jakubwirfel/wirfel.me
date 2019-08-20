@@ -1,0 +1,14 @@
+.links_footer {
+    font-size: 40px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    &:hover {
+      transform: scale(1.4);
+      transition: 0.5s;
+    }
+    &:not( :hover) {
+      transform: scale(1);
+      transition: 0.5s;
+    }
+  }

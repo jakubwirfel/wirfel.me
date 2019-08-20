@@ -1,0 +1,16 @@
+#particles-js {
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    background-image: url('');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    transition: 1s;
+    @include respond-to(small_phone) {
+        height: 140vh;
+    }
+    @include respond-to(small) {
+        height: 100%;
+      }
+}

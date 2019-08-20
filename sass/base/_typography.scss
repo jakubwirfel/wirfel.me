@@ -1,0 +1,36 @@
+@import '../utils/mixins';
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Roboto&display=swap');
+.header_title {
+    line-height: 50px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+}
+.header_content_uppercase {
+    text-transform: uppercase;
+    line-height: 25px;
+    font-style: italic;
+    font-size: 0.9em;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+}
+.header_content {
+    font-style: italic;
+    font-size: 0.9em;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+}
+.nav_link {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Black Han Sans', sans-serif;
+}
+.nav_label {
+    font-size: 2em;
+    font-weight: 900;
+}
