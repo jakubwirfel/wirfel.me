@@ -1,6 +1,6 @@
 @mixin respond-to($breakpoint) {
     @if $breakpoint == "small_phone" {
-      @media (min-width: 660px) {
+      @media (min-width: 560px) {
         @content;
       }
     }

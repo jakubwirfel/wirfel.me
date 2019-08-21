@@ -1,21 +1,14 @@
-.page {
+.main_page {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 0px;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0vh;
     z-index: 1;
     color: white;
-    overflow: hidden;
-    @include respond-to(small_phone) {
-      overflow: inherit;
-  }
-  @include respond-to(small) {
-    overflow: hidden;
-  }
 }
 .header {
   grid-row: 1;
@@ -23,43 +16,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-.nav {
-  grid-row: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  height: auto;
-}
-.nav_link {
-  display: inline-flex;
-  padding: 40px;
-  margin-left: 20px;
-  &:hover {
-    transform: scale(1.4);
-    transition: 0.5s;
-    letter-spacing: 5px;
-  }
-  &:hover .nav_no {
-    transform: rotate(0deg);
-    transition: 0.5s;
-  }
-  &:not( :hover) {
-    transform: scale(1);
-    transition: 0.5s;
-    letter-spacing: 0px;
-  }
-}
-.nav_no {
-  transform: rotate(90deg);
-  padding-top: 10px;
-  padding-right: 20px;
-}
-.nav_dash {
-  height: 4px;
-  width: 250px;
-  background-color: #ffffff;
 }
 .footer {
   display: flex;

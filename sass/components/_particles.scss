@@ -7,10 +7,8 @@
     background-position: 50% 50%;
     background-repeat: no-repeat;
     transition: 1s;
-    @include respond-to(small_phone) {
-        height: 140vh;
-    }
-    @include respond-to(small) {
-        height: 100%;
-      }
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
 }

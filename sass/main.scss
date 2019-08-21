@@ -6,6 +6,9 @@
 @import 'components/links';
 @import 'components/aniamtions.scss';
 
-@import 'pages/home';
+@import 'layout/navigation';
+@import 'layout/sidebar';
 
+@import 'pages/home';
+@import 'pages/about';
 @import 'utils/mixins';

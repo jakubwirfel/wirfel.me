@@ -1,5 +1,6 @@
 @import '../utils/mixins';
 @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Roboto&display=swap');
+
 .header_title {
     line-height: 50px;
     font-weight: 900;
@@ -22,6 +23,7 @@
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 2px;
+    text-align: center;
 }
 .nav_link {
     text-decoration: none;
@@ -31,6 +33,9 @@
     font-family: 'Black Han Sans', sans-serif;
 }
 .nav_label {
-    font-size: 2em;
+    font-size: 1.3em;
     font-weight: 900;
+    @include respond-to(small) {
+        font-size: 2em;
+      }
 }

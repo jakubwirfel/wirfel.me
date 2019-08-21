@@ -3,7 +3,7 @@ var link2 = document.getElementById('link2');
 var link3 = document.getElementById('link3');
 
 var footerColor = document.getElementsByClassName('links_footer');
-var headerColor = document.getElementsByClassName('page')[0];
+var headerColor = document.getElementsByClassName('main_page')[0];
 var navColor = document.getElementsByClassName('nav_link');
 var dashColor = document.getElementsByClassName('nav_dash'); 
 
