@@ -1,16 +1,9 @@
 @mixin respond-to($breakpoint) {
-    @if $breakpoint == "small_phone" {
+    @if $breakpoint == "small" {
       @media (min-width: 560px) {
         @content;
       }
     }
-    
-    @else if $breakpoint == "small" {
-      @media (min-width: 768px) {
-        @content;
-      }
-    }
-
     @else if $breakpoint == "medium" {
       @media (min-width: 992px) {
         @content;
@@ -18,7 +11,7 @@
     }
   
     @else if $breakpoint == "large" {
-      @media (min-width: 1200px) {
+      @media (min-width: 1500px) {
         @content;
       }
     }

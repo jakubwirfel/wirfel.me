@@ -1,0 +1,129 @@
+.main_about {
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    top: 75px;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 0px;
+    @include respond-to(medium) {
+      top: 0;
+      right: 0;
+      left: inherit;
+      height: auto;
+      width: 80%;
+    }
+}
+.projects {
+    height: 90vh;
+    width: 100%;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    @include respond-to(medium) {
+      align-items: baseline;
+      height: auto;
+      padding-top: 15%;
+    }
+}
+.project_no {
+    transform: rotate(90deg);
+    padding-top: 10px;
+    padding-right: 20px;
+    @include respond-to(medium) {
+      padding-top: 120px;
+      padding-right: 40px;
+      font-size: 1em;
+    }
+    @include respond-to(large) {
+      padding-top: 200px;
+      padding-right: 110px;
+      font-size: 1em;
+    }
+  }
+.project_link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    &:hover {
+        transition: 0.5s;
+        letter-spacing: 2px;
+        @include respond-to(medium) {
+          letter-spacing: 10px;
+          transform: scale(1.03);
+        }
+      }
+    &:not( :hover) {
+        transition: 0.5s;
+        letter-spacing: 0px;
+      }
+    &:hover .project_no {
+        transform: rotate(0deg);
+        transition: 0.5s;
+        padding-top: 5px;
+        @include respond-to(medium) {
+          transform: rotate(90deg); 
+          transition: 0s;
+          padding-top: 120px;
+          letter-spacing: 0px;
+        }
+        @include respond-to(large) {
+          padding-top: 200px;
+        }
+    }
+    &:hover::after {
+        left: 20px;
+        transition: 1s;
+      }
+    &::after {
+        content: '';
+        position: absolute;
+        left: -200px;
+        margin-top: 20px;
+        height: 4px;
+        width: 200px;
+        background-color: #F4A950;
+        border-radius: 50px;
+        @include respond-to(medium) {
+          content: none;
+        }
+      }
+}
+.project_dash {
+    height: 4px;
+    width: 200px;
+    background-color: #F4A950;
+}
+.project_label {
+  @include respond-to(medium) {
+    padding: 50px;
+    line-height: 140px;
+  }
+  @include respond-to(large) {
+    padding: 50px;
+    line-height: 150px;
+  }
+}
+.work_about {
+    height: 300px;
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    @include respond-to(medium) {
+      height: 100px;
+      width: 80%;
+      padding: 100px 0px 200px 75px;
+    }
+    @include respond-to(large) {
+      height: 100px;
+      width: 40%;
+      padding: 200px 0px 200px 75px;
+    }
+}

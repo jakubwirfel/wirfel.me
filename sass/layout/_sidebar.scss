@@ -1,15 +1,22 @@
 .sidebar {
     width: 100%;
     height: 75px;
-    top: 0;
-    left: 0;
     position: absolute;
+    z-index: 1;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    color: #3D3D3D;
     font-weight: 600;
-    background-color: rgba($color: #3D3D3D, $alpha: 0.2);
+    background-color: rgba($color: #3D3D3D, $alpha: 0.4);
+    @include respond-to(medium) {
+        width: 75px;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+        position: fixed;
+        left: 100px;
+        background-color: unset;
+      }
 }
 .sidebar_link {
     height: 50px;
@@ -18,14 +25,23 @@
     align-items: center;
     justify-content: center;
     border-radius: 50px;
-    border: double 5px #F96167;
+    border: solid 2px #F4A950;
     cursor: pointer;
     text-decoration: none;
-    color: #F96167;
+    color: #F4A950;
+    margin-left: 1em;
+    @include respond-to(medium) {
+    margin-left: 0em;
+    margin-top: -5em;
+    }
+    &:not( :hover) {
+        transform: scale(1);
+        transition: 0.5s;
+    }
     &:hover {
-        background-color: #F96167;
-        color: #00A4CCFF;
-        border: solid 2px #00A4CCFF;
+        background-color: #F4A950;
+        color: #161B21;
+        border: solid 2px #161B21;
         transform: scale(1.2);
         transition: 0.5s;
     }
@@ -33,8 +49,29 @@
         font-size: 1.6em;
     }
 }
-.sidebar_content_name {
+.sidebar_owner {
+    display: none;
+    @include respond-to(medium) {
+        display: inline-block;
+        transform: rotate(270deg);
+        width: 140px;
+    }
+    h3 {
+        font-weight: 900;
+        color: #F4A950;
+        font-size: 1em;
+        letter-spacing: 2px;
+    }
+}
+.sidebar_name {
     text-transform: uppercase;
     font-weight: 900;
-    color: #F96167;
+    color: #F4A950;
+    font-size: 0.8em;
+    padding-right: 1em;
+    @include respond-to(medium) {
+        transform: rotate(270deg);
+        padding-right: 5em;
+        font-size: 1em;
+    }
 }

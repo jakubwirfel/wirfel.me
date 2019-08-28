@@ -25,7 +25,8 @@
     letter-spacing: 2px;
     text-align: center;
 }
-.nav_link {
+.nav_link,
+.project_link {
     text-decoration: none;
     color: #ffffff;
     text-transform: uppercase;
@@ -37,5 +38,34 @@
     font-weight: 900;
     @include respond-to(small) {
         font-size: 2em;
+    }
+}
+.project_label {
+    font-size: 1.7em;
+    font-weight: 900;
+    @include respond-to(medium) {
+        font-size: 3.5em;
+      }
+    @include respond-to(large) {
+        font-size: 8em;
+      }
+}
+.project_link {
+    font-size: 1.1em;
+    color: #F4A950;
+}
+.work_about {
+    color: #F4A950;
+    text-align: left;
+    line-height: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.1em;
+    @include respond-to(medium) {
+        font-size: 1.5em;
+        line-height: 30px;
+      }
+    @include respond-to(large) {
+        font-size: 1.2em;
       }
 }

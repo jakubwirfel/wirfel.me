@@ -2,6 +2,7 @@
 html, body {
   width: 100%;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 html {
@@ -129,7 +130,8 @@ li {
   text-align: center;
 }
 
-.nav_link {
+.nav_link,
+.project_link {
   text-decoration: none;
   color: #ffffff;
   text-transform: uppercase;
@@ -141,15 +143,55 @@ li {
   font-size: 1.3em;
   font-weight: 900;
 }
-@media (min-width: 768px) {
+@media (min-width: 560px) {
   .nav_label {
     font-size: 2em;
   }
 }
 
+.project_label {
+  font-size: 1.7em;
+  font-weight: 900;
+}
+@media (min-width: 992px) {
+  .project_label {
+    font-size: 3.5em;
+  }
+}
+@media (min-width: 1500px) {
+  .project_label {
+    font-size: 8em;
+  }
+}
+
+.project_link {
+  font-size: 1.1em;
+  color: #F4A950;
+}
+
+.work_about {
+  color: #F4A950;
+  text-align: left;
+  line-height: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.1em;
+}
+@media (min-width: 992px) {
+  .work_about {
+    font-size: 1.5em;
+    line-height: 30px;
+  }
+}
+@media (min-width: 1500px) {
+  .work_about {
+    font-size: 1.2em;
+  }
+}
+
 #particles-js {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: #111;
   background-image: url("");
   background-size: cover;
@@ -316,7 +358,7 @@ li {
   transition: 0.5s;
   padding-top: 5px;
 }
-@media (min-width: 768px) {
+@media (min-width: 560px) {
   .nav_link:hover .nav_no {
     padding-top: 15px;
   }
@@ -342,15 +384,24 @@ li {
 .sidebar {
   width: 100%;
   height: 75px;
-  top: 0;
-  left: 0;
   position: absolute;
+  z-index: 1;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  color: #3D3D3D;
   font-weight: 600;
-  background-color: rgba(61, 61, 61, 0.2);
+  background-color: rgba(61, 61, 61, 0.4);
+}
+@media (min-width: 992px) {
+  .sidebar {
+    width: 75px;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    position: fixed;
+    left: 100px;
+    background-color: unset;
+  }
 }
 
 .sidebar_link {
@@ -360,15 +411,26 @@ li {
   align-items: center;
   justify-content: center;
   border-radius: 50px;
-  border: double 5px #F96167;
+  border: solid 2px #F4A950;
   cursor: pointer;
   text-decoration: none;
-  color: #F96167;
+  color: #F4A950;
+  margin-left: 1em;
+}
+@media (min-width: 992px) {
+  .sidebar_link {
+    margin-left: 0em;
+    margin-top: -5em;
+  }
+}
+.sidebar_link:not(:hover) {
+  transform: scale(1);
+  transition: 0.5s;
 }
 .sidebar_link:hover {
-  background-color: #F96167;
-  color: #00A4CCFF;
-  border: solid 2px #00A4CCFF;
+  background-color: #F4A950;
+  color: #161B21;
+  border: solid 2px #161B21;
   transform: scale(1.2);
   transition: 0.5s;
 }
@@ -376,10 +438,36 @@ li {
   font-size: 1.6em;
 }
 
-.sidebar_content_name {
+.sidebar_owner {
+  display: none;
+}
+@media (min-width: 992px) {
+  .sidebar_owner {
+    display: inline-block;
+    transform: rotate(270deg);
+    width: 140px;
+  }
+}
+.sidebar_owner h3 {
+  font-weight: 900;
+  color: #F4A950;
+  font-size: 1em;
+  letter-spacing: 2px;
+}
+
+.sidebar_name {
   text-transform: uppercase;
   font-weight: 900;
-  color: #F96167;
+  color: #F4A950;
+  font-size: 0.8em;
+  padding-right: 1em;
+}
+@media (min-width: 992px) {
+  .sidebar_name {
+    transform: rotate(270deg);
+    padding-right: 5em;
+    font-size: 1em;
+  }
 }
 
 .main_page {
@@ -393,6 +481,13 @@ li {
   top: 0vh;
   z-index: 1;
   color: white;
+  overflow-x: hidden;
+}
+@media (min-width: 992px) {
+  .main_page {
+    overflow: inherit;
+    overflow-x: hidden;
+  }
 }
 
 .header {
@@ -415,6 +510,164 @@ li {
   display: flex;
   justify-content: space-between;
   padding-bottom: 60px;
+}
+
+.main_about {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 0px;
+}
+@media (min-width: 992px) {
+  .main_about {
+    top: 0;
+    right: 0;
+    left: inherit;
+    height: auto;
+    width: 80%;
+  }
+}
+
+.projects {
+  height: 90vh;
+  width: 100%;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+@media (min-width: 992px) {
+  .projects {
+    align-items: baseline;
+    height: auto;
+    padding-top: 15%;
+  }
+}
+
+.project_no {
+  transform: rotate(90deg);
+  padding-top: 10px;
+  padding-right: 20px;
+}
+@media (min-width: 992px) {
+  .project_no {
+    padding-top: 120px;
+    padding-right: 40px;
+    font-size: 1em;
+  }
+}
+@media (min-width: 1500px) {
+  .project_no {
+    padding-top: 200px;
+    padding-right: 110px;
+    font-size: 1em;
+  }
+}
+
+.project_link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+}
+.project_link:hover {
+  transition: 0.5s;
+  letter-spacing: 2px;
+}
+@media (min-width: 992px) {
+  .project_link:hover {
+    letter-spacing: 10px;
+    transform: scale(1.03);
+  }
+}
+.project_link:not(:hover) {
+  transition: 0.5s;
+  letter-spacing: 0px;
+}
+.project_link:hover .project_no {
+  transform: rotate(0deg);
+  transition: 0.5s;
+  padding-top: 5px;
+}
+@media (min-width: 992px) {
+  .project_link:hover .project_no {
+    transform: rotate(90deg);
+    transition: 0s;
+    padding-top: 120px;
+    letter-spacing: 0px;
+  }
+}
+@media (min-width: 1500px) {
+  .project_link:hover .project_no {
+    padding-top: 200px;
+  }
+}
+.project_link:hover::after {
+  left: 20px;
+  transition: 1s;
+}
+.project_link::after {
+  content: "";
+  position: absolute;
+  left: -200px;
+  margin-top: 20px;
+  height: 4px;
+  width: 200px;
+  background-color: #F4A950;
+  border-radius: 50px;
+}
+@media (min-width: 992px) {
+  .project_link::after {
+    content: none;
+  }
+}
+
+.project_dash {
+  height: 4px;
+  width: 200px;
+  background-color: #F4A950;
+}
+
+@media (min-width: 992px) {
+  .project_label {
+    padding: 50px;
+    line-height: 140px;
+  }
+}
+@media (min-width: 1500px) {
+  .project_label {
+    padding: 50px;
+    line-height: 150px;
+  }
+}
+
+.work_about {
+  height: 300px;
+  width: 100%;
+  padding: 20px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+@media (min-width: 992px) {
+  .work_about {
+    height: 100px;
+    width: 80%;
+    padding: 100px 0px 200px 75px;
+  }
+}
+@media (min-width: 1500px) {
+  .work_about {
+    height: 100px;
+    width: 40%;
+    padding: 200px 0px 200px 75px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
