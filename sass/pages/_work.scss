@@ -35,7 +35,7 @@
     padding-top: 10px;
     padding-right: 20px;
     @include respond-to(medium) {
-      padding-top: 120px;
+      padding-top: 90px;
       padding-right: 40px;
       font-size: 1em;
     }
@@ -70,12 +70,16 @@
         @include respond-to(medium) {
           transform: rotate(90deg); 
           transition: 0s;
-          padding-top: 120px;
+          padding-top: 110px;
           letter-spacing: 0px;
         }
         @include respond-to(large) {
           padding-top: 200px;
         }
+    }
+    &:hover .project_external_link {
+      transition: 1s;
+      transform: scale(1.1);
     }
     &:hover::after {
         left: 20px;
@@ -83,8 +87,8 @@
       }
     &::after {
         content: '';
-        position: absolute;
-        left: -200px;
+        position: fixed;
+        left: -300px;
         margin-top: 20px;
         height: 4px;
         width: 200px;
@@ -102,12 +106,31 @@
 }
 .project_label {
   @include respond-to(medium) {
-    padding: 50px;
+    padding: 50px 0px 50px 50px;
     line-height: 140px;
   }
   @include respond-to(large) {
-    padding: 50px;
+    padding: 50px 0px 50px 50px;
     line-height: 150px;
+  }
+}
+.project_external_link {
+  display: none;
+  @include respond-to(medium) {
+    display: block;
+    padding-top: 20px;
+    padding-left: 10px;
+    i {
+      font-size: 1em;
+    }
+  }
+  @include respond-to(large) {
+    display: block;
+    padding-top: 50px;
+    padding-left: 30px;
+    i {
+      font-size: 1.5em;
+    }
   }
 }
 .work_about {
