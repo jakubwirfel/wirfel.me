@@ -16,3 +16,13 @@
       }
     }
   }
+  
+@mixin technologies_after {
+    font-size: 0.3em;
+    text-transform: uppercase;
+    position: absolute;
+    display: block;
+    font-style: italic;
+    font-family: 'Black Han Sans', sans-serif;
+    margin-top: 5px;
+}

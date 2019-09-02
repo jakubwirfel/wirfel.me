@@ -115,3 +115,20 @@
   animation-delay: 0.5s;
   -webkit-animation-delay: 0.5s;
 }
+
+//AOS..
+
+$aos-distance: 100px !default;
+[data-aos="anim1"] {
+    opacity: 0;
+    transition-property: opacity, transform;
+  &.aos-animate {
+    opacity: 1;
+    transform: none;
+  }
+}
+[data-aos='anim1'] {
+  @include respond-to(medium) {
+    transform: translate3d($aos-distance, 0, 0);
+  }
+}

@@ -1,0 +1,88 @@
+.main_portfolio {
+    height: auto;
+    width: 100%;
+    position: absolute;
+}
+.portfolio_title {
+    height: 150px;
+    width: 100%;
+    padding-top: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+.portfolio_about {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+.industry {
+    height: auto;
+    width: 100%;
+}
+.technologies {
+    height: auto;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+.technologies_content {
+    width: 100%;
+    font-size: 2.5em;
+    color: #F4A950;
+    text-decoration: none;
+    display: flex;
+    justify-content: start;
+    i {
+        padding-right: 25px;
+        padding-left: 10px;
+        &:nth-child(2){
+            font-size: 1em;
+            &::after {
+                content: 'Css3';
+                @include technologies_after;
+                margin-left: -1wwpx;
+            }
+        }
+        &:first-child {
+            font-size: 1em;
+            &::after {
+                content: 'html5';
+                @include technologies_after;
+                margin-left: -5px;
+            }
+        }
+    }
+}
+.portfolio_page_about {
+    height: auto;
+    width: 100%;
+    p {
+        color: #F4A950;
+        line-height: 20px;
+    }
+}
+.portfolio_content_comp {
+    width: 100%;
+    padding: 20px;
+}
+.portfolio_next {
+    color: #F4A950;
+    padding: 20px;
+    font-size: 1.2em;
+    display: flex;
+    cursor: pointer;
+    i {
+        display: inline-block;
+        font-size: 0.6em;
+        padding: 5px 0px 0px 5px;
+    }
+    a {
+        text-decoration: none;
+        color: #F4A950;
+    }
+}

@@ -1,4 +1,4 @@
-.main_about {
+.main_work {
     height: 100%;
     width: 100%;
     position:absolute;
@@ -27,7 +27,12 @@
     @include respond-to(medium) {
       align-items: baseline;
       height: auto;
-      padding-top: 15%;
+      padding-top: 10%;
+    }
+    @include respond-to(large) {
+      align-items: baseline;
+      height: auto;
+      padding-top: 23%;
     }
 }
 .project_no {

@@ -69,3 +69,24 @@
         font-size: 1.2em;
       }
 }
+.portfolio_title {
+    color: #F4A950;
+    font-size: 1.3em;
+    font-family: 'Black Han Sans', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.industry_title, 
+.technologies_title {
+    color: #F4A950;
+    font-size: 1em;
+    text-transform: uppercase;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+.industry_paragraph {
+    color: #F4A950;
+    font-size: 1em;
+    font-style: italic;
+    letter-spacing: 1px;
+}
