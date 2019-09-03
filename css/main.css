@@ -196,6 +196,11 @@ li {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+@media (min-width: 992px) {
+  .portfolio_title {
+    font-size: 5em;
+  }
+}
 
 .industry_title,
 .technologies_title {
@@ -205,12 +210,25 @@ li {
   line-height: 30px;
   letter-spacing: 1px;
 }
+@media (min-width: 992px) {
+  .industry_title,
+.technologies_title {
+    font-size: 1.5em;
+  }
+}
 
 .industry_paragraph {
   color: #F4A950;
   font-size: 1em;
   font-style: italic;
   letter-spacing: 1px;
+}
+@media (min-width: 992px) {
+  .industry_paragraph {
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 1.2em;
+  }
 }
 
 #particles-js {
@@ -749,6 +767,12 @@ li {
   width: 100%;
   position: absolute;
 }
+@media (min-width: 992px) {
+  .main_portfolio {
+    right: 0;
+    width: 80%;
+  }
+}
 
 .portfolio_title {
   height: 150px;
@@ -759,6 +783,11 @@ li {
   justify-content: flex-start;
   padding-left: 20px;
 }
+@media (min-width: 992px) {
+  .portfolio_title {
+    padding-top: 30%;
+  }
+}
 
 .portfolio_about {
   height: auto;
@@ -766,7 +795,14 @@ li {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  padding: 10px 20px;
+  padding: 0px 20px;
+}
+@media (min-width: 992px) {
+  .portfolio_about {
+    width: 70%;
+    flex-direction: row;
+    padding-top: 150px;
+  }
 }
 
 .industry {
@@ -780,6 +816,11 @@ li {
   padding-top: 10px;
   padding-bottom: 30px;
 }
+@media (min-width: 992px) {
+  .technologies {
+    padding-top: 0px;
+  }
+}
 
 .technologies_content {
   width: 100%;
@@ -789,12 +830,28 @@ li {
   display: flex;
   justify-content: start;
 }
+@media (min-width: 992px) {
+  .technologies_content {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+}
 .technologies_content i {
   padding-right: 25px;
   padding-left: 10px;
 }
+@media (min-width: 992px) {
+  .technologies_content i {
+    font-size: 1.5em;
+  }
+}
 .technologies_content i:nth-child(2) {
   font-size: 1em;
+}
+@media (min-width: 992px) {
+  .technologies_content i:nth-child(2) {
+    font-size: 1.5em;
+  }
 }
 .technologies_content i:nth-child(2)::after {
   content: "Css3";
@@ -805,10 +862,15 @@ li {
   font-style: italic;
   font-family: "Black Han Sans", sans-serif;
   margin-top: 5px;
-  margin-left: -1wwpx;
+  margin-left: -1px;
 }
 .technologies_content i:first-child {
   font-size: 1em;
+}
+@media (min-width: 992px) {
+  .technologies_content i:first-child {
+    font-size: 1.5em;
+  }
 }
 .technologies_content i:first-child::after {
   content: "html5";
@@ -825,30 +887,81 @@ li {
 .portfolio_page_about {
   height: auto;
   width: 100%;
+  padding-left: 20px;
 }
 .portfolio_page_about p {
   color: #F4A950;
   line-height: 20px;
 }
-
-.portfolio_content_comp {
-  width: 100%;
-  padding: 20px;
+@media (min-width: 992px) {
+  .portfolio_page_about {
+    width: 80%;
+    font-weight: 700;
+    font-size: 1.2em;
+    padding-bottom: 50px;
+    padding-top: 100px;
+  }
+}
+@media (min-width: 1500px) {
+  .portfolio_page_about {
+    width: 50%;
+    font-weight: 700;
+    font-size: 1.2em;
+    padding-bottom: 50px;
+    padding-top: 100px;
+  }
 }
 
-.portfolio_next {
+.img_container {
+  position: relative;
+}
+.img_container::before {
+  content: "";
+  background-color: #F4A950;
+  position: absolute;
+  height: 90%;
+  width: 75%;
+  left: 50px;
+  top: 50px;
+  z-index: -1;
+}
+@media (min-width: 560px) {
+  .img_container::before {
+    content: none;
+  }
+}
+
+.portfolio_shot {
+  width: 90%;
+  padding: 20px;
+}
+@media (min-width: 560px) {
+  .portfolio_shot {
+    width: 90%;
+  }
+}
+@media (min-width: 1500px) {
+  .portfolio_shot {
+    width: 70%;
+  }
+}
+
+.portfolio_next,
+.portfolio_link {
   color: #F4A950;
   padding: 20px;
   font-size: 1.2em;
   display: flex;
   cursor: pointer;
 }
-.portfolio_next i {
+.portfolio_next i,
+.portfolio_link i {
   display: inline-block;
   font-size: 0.6em;
   padding: 5px 0px 0px 5px;
 }
-.portfolio_next a {
+.portfolio_next a,
+.portfolio_link a {
   text-decoration: none;
   color: #F4A950;
 }

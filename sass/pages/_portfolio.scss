@@ -2,6 +2,10 @@
     height: auto;
     width: 100%;
     position: absolute;
+    @include respond-to(medium) {
+        right: 0;
+        width: 80%;
+    }
 }
 .portfolio_title {
     height: 150px;
@@ -11,6 +15,9 @@
     align-items: center;
     justify-content: flex-start;
     padding-left: 20px;
+    @include respond-to(medium) {
+        padding-top: 30%;
+    }
 }
 .portfolio_about {
     height: auto;
@@ -18,7 +25,12 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    padding: 10px 20px;
+    padding: 0px 20px;
+    @include respond-to(medium) {
+        width: 70%;
+        flex-direction: row;
+        padding-top: 150px;
+    }
 }
 .industry {
     height: auto;
@@ -29,6 +41,9 @@
     width: 100%;
     padding-top: 10px;
     padding-bottom: 30px;
+    @include respond-to(medium) {
+        padding-top: 0px;
+    }
 }
 .technologies_content {
     width: 100%;
@@ -37,19 +52,32 @@
     text-decoration: none;
     display: flex;
     justify-content: start;
+    @include respond-to(medium) {
+        padding-top: 10px;
+        padding-left: 10px;
+    }
     i {
         padding-right: 25px;
         padding-left: 10px;
+        @include respond-to(medium) {
+            font-size: 1.5em;
+        }
         &:nth-child(2){
             font-size: 1em;
+            @include respond-to(medium) {
+                font-size: 1.5em;
+            }
             &::after {
                 content: 'Css3';
                 @include technologies_after;
-                margin-left: -1wwpx;
+                margin-left: -1px;
             }
         }
         &:first-child {
             font-size: 1em;
+            @include respond-to(medium) {
+                font-size: 1.5em;
+            }
             &::after {
                 content: 'html5';
                 @include technologies_after;
@@ -61,16 +89,55 @@
 .portfolio_page_about {
     height: auto;
     width: 100%;
+    padding-left: 20px;
     p {
         color: #F4A950;
         line-height: 20px;
     }
+    @include respond-to(medium) {
+        width: 80%;
+        font-weight: 700;
+        font-size: 1.2em;
+        padding-bottom: 50px;
+        padding-top: 100px;
+    }
+    @include respond-to(large) {
+        width: 50%;
+        font-weight: 700;
+        font-size: 1.2em;
+        padding-bottom: 50px;
+        padding-top: 100px;
+    }
+    
 }
-.portfolio_content_comp {
-    width: 100%;
+.img_container {
+    position: relative;
+    &::before {
+        content: '';
+        background-color: #F4A950;
+        position: absolute;
+        height: 90%;
+        width: 75%;
+        left: 50px;
+        top: 50px;
+        z-index: -1;
+        @include respond-to(small) {
+            content: none;
+        }
+    }
+}
+.portfolio_shot {
+    width: 90%;
     padding: 20px;
+    @include respond-to(small) {
+        width: 90%;
+    }
+    @include respond-to(large) {
+        width: 70%;
+    }
 }
-.portfolio_next {
+.portfolio_next,
+.portfolio_link {
     color: #F4A950;
     padding: 20px;
     font-size: 1.2em;
