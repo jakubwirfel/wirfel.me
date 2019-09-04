@@ -39,16 +39,16 @@
                 <div class="portfolio_page_about">
                         <p>Strona wizytówka zrobiona dla rodziny. Poświęcona w całości ogrodnictwu, które prowadzimy. Technologie jakie zostały wykoszystane to: HTML5, CSS3, JS oraz Sass. W pełni responsywna z hamburger menu. Nadal w trakcie budowy</p>
                 </div>
-                <section class="portfolio_content">
+                <section class="portfolio_content">  
                     <div class="img_container">
                         <img class="portfolio_shot" id="image" src="assets/Ogrodnictwo3.png"/>
                     </div>
                 </section>
                 <div class="portfolio_link">
-                        <a href="https://jakubwirfel.github.io/Ogrodnictwo/" target="_blank">Zobacz stronę</a><i class="fas fa-external-link-alt"></i>
+                        <a href="https://jakubwirfel.github.io/Ogrodnictwo/" target="_blank" >Zobacz stronę<i class="fas fa-external-link-alt"></i></a>
                     </div>
                 <div class="portfolio_next">
-                    <a href="work.html">Fotowoltaika</a><i class="fas fa-external-link-alt"></i>
+                    <a href="fotowoltaika.html">Fotowoltaika<i class="fas fa-external-link-alt"></i></a>
                 </div>
             </main>
     <script type="text/javascript" src="js/particles.js"></script>
@@ -59,6 +59,14 @@
         AOS.init({
             duration:1200,
         })
+    </script>
+    <script type="text/javascript">
+        var image = document.getElementById('image');
+        var width = window.innerWidth;  
+
+        if (width >= 560) {
+            image.src = 'assets/Ogrodnictwo2.png';
+        }
     </script>
 </body>
 </html>

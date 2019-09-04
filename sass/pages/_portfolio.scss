@@ -35,12 +35,13 @@
 .industry {
     height: auto;
     width: 100%;
+    padding-bottom: 20px;
 }
 .technologies {
     height: auto;
     width: 100%;
     padding-top: 10px;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
     @include respond-to(medium) {
         padding-top: 0px;
     }
@@ -120,15 +121,38 @@
         width: 75%;
         left: 50px;
         top: 50px;
-        z-index: -1;
+        z-index: 1;
         @include respond-to(small) {
-            content: none;
+            position: absolute;
+            height: 83%;
+            width: 82%;
+            left: 50px;
+            top: 50px;
+            z-index: 1;
+        }
+        @include respond-to(medium) {
+            position: absolute;
+            height: 89%;
+            width: 85%;
+            left: 50px;
+            top: 50px;
+            z-index: 1;
+        }
+        @include respond-to(large) {
+            position: absolute;
+            height: 90%;
+            width: 66.5%;
+            left: 50px;
+            top: 50px;
+            z-index: 1;
         }
     }
 }
 .portfolio_shot {
     width: 90%;
     padding: 20px;
+    position: relative;
+    z-index: 2;
     @include respond-to(small) {
         width: 90%;
     }
@@ -143,6 +167,10 @@
     font-size: 1.2em;
     display: flex;
     cursor: pointer;
+    position: relative;
+    @include respond-to(medium) {
+        top: 70px;
+    }
     i {
         display: inline-block;
         font-size: 0.6em;
@@ -152,4 +180,25 @@
         text-decoration: none;
         color: #F4A950;
     }
+    &:hover {
+        letter-spacing: 2px;
+        width: 250px;
+        left: 20px;
+        transition: 2s;
+    }
+    &:not( :hover) {
+        letter-spacing: 0px;
+        transition: 2s;
+    }
+    &:hover {
+        border-left: solid 5px #F4A950;
+        transition: 0.5s;
+    }
+    &:not( :hover) {
+        transition: 0.5s;
+        border-left: solid 0px #F4A950;
+    }
+}
+.portfolio_content {
+    position: relative;
 }

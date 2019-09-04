@@ -76,6 +76,9 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     @include respond-to(medium) {
+        font-size: 4em;
+    }
+    @include respond-to(large) {
         font-size: 5em;
     }
 }

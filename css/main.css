@@ -198,6 +198,11 @@ li {
 }
 @media (min-width: 992px) {
   .portfolio_title {
+    font-size: 4em;
+  }
+}
+@media (min-width: 1500px) {
+  .portfolio_title {
     font-size: 5em;
   }
 }
@@ -641,6 +646,9 @@ li {
   align-items: center;
   padding-left: 20px;
 }
+.project_link:last-child {
+  text-decoration: line-through;
+}
 .project_link:hover {
   transition: 0.5s;
   letter-spacing: 2px;
@@ -808,13 +816,14 @@ li {
 .industry {
   height: auto;
   width: 100%;
+  padding-bottom: 20px;
 }
 
 .technologies {
   height: auto;
   width: 100%;
   padding-top: 10px;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 @media (min-width: 992px) {
   .technologies {
@@ -923,17 +932,44 @@ li {
   width: 75%;
   left: 50px;
   top: 50px;
-  z-index: -1;
+  z-index: 1;
 }
 @media (min-width: 560px) {
   .img_container::before {
-    content: none;
+    position: absolute;
+    height: 83%;
+    width: 82%;
+    left: 50px;
+    top: 50px;
+    z-index: 1;
+  }
+}
+@media (min-width: 992px) {
+  .img_container::before {
+    position: absolute;
+    height: 89%;
+    width: 85%;
+    left: 50px;
+    top: 50px;
+    z-index: 1;
+  }
+}
+@media (min-width: 1500px) {
+  .img_container::before {
+    position: absolute;
+    height: 90%;
+    width: 66.5%;
+    left: 50px;
+    top: 50px;
+    z-index: 1;
   }
 }
 
 .portfolio_shot {
   width: 90%;
   padding: 20px;
+  position: relative;
+  z-index: 2;
 }
 @media (min-width: 560px) {
   .portfolio_shot {
@@ -953,6 +989,13 @@ li {
   font-size: 1.2em;
   display: flex;
   cursor: pointer;
+  position: relative;
+}
+@media (min-width: 992px) {
+  .portfolio_next,
+.portfolio_link {
+    top: 70px;
+  }
 }
 .portfolio_next i,
 .portfolio_link i {
@@ -964,6 +1007,32 @@ li {
 .portfolio_link a {
   text-decoration: none;
   color: #F4A950;
+}
+.portfolio_next:hover,
+.portfolio_link:hover {
+  letter-spacing: 2px;
+  width: 250px;
+  left: 20px;
+  transition: 2s;
+}
+.portfolio_next:not(:hover),
+.portfolio_link:not(:hover) {
+  letter-spacing: 0px;
+  transition: 2s;
+}
+.portfolio_next:hover,
+.portfolio_link:hover {
+  border-left: solid 5px #F4A950;
+  transition: 0.5s;
+}
+.portfolio_next:not(:hover),
+.portfolio_link:not(:hover) {
+  transition: 0.5s;
+  border-left: solid 0px #F4A950;
+}
+
+.portfolio_content {
+  position: relative;
 }
 
 /*# sourceMappingURL=main.css.map */
