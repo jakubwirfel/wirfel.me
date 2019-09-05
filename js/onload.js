@@ -1,6 +1,6 @@
 var particles = document.getElementById('particles-js');
 
-aboutusload = function () {
+aboutload = function () {
     particles.style.backgroundColor = ('#00A4CCFF');
  }
 workload = function () {
