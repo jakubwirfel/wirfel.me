@@ -25,10 +25,9 @@
     align-items: center;
     justify-content: center;
     border-radius: 50px;
-    border: solid 2px #F4A950;
+    border: solid 2px transparent;
     cursor: pointer;
     text-decoration: none;
-    color: #F4A950;
     margin-left: 1em;
     @include respond-to(medium) {
     margin-left: 0em;
@@ -39,9 +38,6 @@
         transition: 0.5s;
     }
     &:hover {
-        background-color: #F4A950;
-        color: #161B21;
-        border: solid 2px #161B21;
         transform: scale(1.2);
         transition: 0.5s;
     }
@@ -56,7 +52,6 @@
         transform: rotate(270deg);
         width: 140px;
         font-weight: 900;
-        color: #F4A950;
         font-size: 1em;
         letter-spacing: 2px;
     }
@@ -64,7 +59,6 @@
 .sidebar_name {
     text-transform: uppercase;
     font-weight: 900;
-    color: #F4A950;
     font-size: 0.8em;
     padding-right: 1em;
     @include respond-to(medium) {

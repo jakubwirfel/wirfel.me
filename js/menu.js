@@ -12,17 +12,17 @@ var nav = document.getElementsByClassName('nav')[0];
 
 link1.onmouseover = function () {
     particles.style.backgroundColor = ('#00A4CCFF');
-    headerColor.style.color = ('#F96167');
+    headerColor.style.color = ('#B71C1C');
     for (let i=0; i<navColor.length; i++) { 
-        navColor[i].style.color = "#F96167";
+        navColor[i].style.color = "#B71C1C";
     }
     link2.style.opacity = ('0.5');
     link3.style.opacity = ('0.5');
     for (let i=0; i<footerColor.length; i++) { 
-        footerColor[i].style.color = "#F96167";
+        footerColor[i].style.color = "#B71C1C";
     }
     for (let i=0; i<dashColor.length; i++) { 
-        dashColor[i].style.backgroundColor = "#F96167";
+        dashColor[i].style.backgroundColor = "#B71C1C";
     }
 }
 link2.onmouseover = function () {
