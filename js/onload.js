@@ -4,21 +4,21 @@ var sidebar_owner = document.querySelector('.sidebar_owner');
 var sidebar_name = document.querySelector('.sidebar_name');
 
 aboutload = function () {
-    particles.style.backgroundColor = ('#00A4CCFF');
-    sidebar_link.style.color = ('#B71C1C');
-    sidebar_link.style.borderColor = ('#B71C1C');
-    sidebar_owner.style.color = ('#B71C1C');
-    sidebar_name.style.color = ('#B71C1C');
+    particles.style.backgroundColor = ('#004D47');
+    sidebar_link.style.color = ('#B9C4C9');
+    sidebar_link.style.borderColor = ('#B9C4C9');
+    sidebar_owner.style.color = ('#B9C4C9');
+    sidebar_name.style.color = ('#B9C4C9');
 
     sidebar_link.onmouseover = function () {
-        sidebar_link.style.backgroundColor = ('#B71C1C');
+        sidebar_link.style.backgroundColor = ('#B9C4C9');
         sidebar_link.style.borderColor = ('#000');
         sidebar_link.style.color = ('#000');
     }
     sidebar_link.onmouseout= function () {
         sidebar_link.style.backgroundColor = ('transparent');
-        sidebar_link.style.borderColor = ('#B71C1C');
-        sidebar_link.style.color = ('#B71C1C');
+        sidebar_link.style.borderColor = ('#B9C4C9');
+        sidebar_link.style.color = ('#B9C4C9');
     }
  }
 

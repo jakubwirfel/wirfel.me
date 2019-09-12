@@ -23,7 +23,7 @@
 .main_container {
   height: auto;
   width: 90%;
-  color: #B71C1C;
+  color: #B9C4C9;
   @include respond-to(medium) {
     height: auto;
     width: 80%;
@@ -47,7 +47,7 @@
   h1 {
     font-size: 1.1em;
     line-height: 23px;
-    color: #B71C1C;
+    color: #B9C4C9;
     text-transform: uppercase;
     @include respond-to(medium) {
       font-size: 2em;
@@ -63,7 +63,7 @@
     padding-top: 15vh;
     font-size: 1.4em;
     line-height: 23px;
-    color: #B71C1C;
+    color: #B9C4C9;
     font-style: italic;
     @include respond-to(medium) {
       font-size: 1.8em;
@@ -88,7 +88,7 @@
 }
 .experiance {
   height: auto;
-  color: #B71C1C;
+  color: #B9C4C9;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -111,7 +111,7 @@
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 0px;
   &:first-child {
-    border-bottom:  solid 4px #B71C1C;
+    border-bottom:  solid 4px #B9C4C9;
   }
   &:nth-child(2) {
     padding-top: 20px;
@@ -165,7 +165,7 @@
   }
   div {
     font-size: 0.8em;
-    color: #B71C1C;
+    color: #B9C4C9;
     font-weight: 800;
     padding-bottom: 4px;
     @include respond-to(large) {

@@ -249,7 +249,7 @@ li {
 .about_title {
   font-size: 1.4em;
   text-transform: uppercase;
-  color: #B71C1C;
+  color: #B9C4C9;
   padding: 20px 0px;
   padding-top: 0px;
 }
@@ -1084,7 +1084,7 @@ li {
 .main_container {
   height: auto;
   width: 90%;
-  color: #B71C1C;
+  color: #B9C4C9;
 }
 @media (min-width: 992px) {
   .main_container {
@@ -1118,7 +1118,7 @@ li {
 .about_me h1 {
   font-size: 1.1em;
   line-height: 23px;
-  color: #B71C1C;
+  color: #B9C4C9;
   text-transform: uppercase;
 }
 @media (min-width: 992px) {
@@ -1138,7 +1138,7 @@ li {
   padding-top: 15vh;
   font-size: 1.4em;
   line-height: 23px;
-  color: #B71C1C;
+  color: #B9C4C9;
   font-style: italic;
 }
 @media (min-width: 992px) {
@@ -1173,7 +1173,7 @@ li {
 
 .experiance {
   height: auto;
-  color: #B71C1C;
+  color: #B9C4C9;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -1202,7 +1202,7 @@ li {
   grid-gap: 0px;
 }
 .grid_container:first-child {
-  border-bottom: solid 4px #B71C1C;
+  border-bottom: solid 4px #B9C4C9;
 }
 .grid_container:nth-child(2) {
   padding-top: 20px;
@@ -1264,7 +1264,7 @@ li {
 }
 .tech_box div {
   font-size: 0.8em;
-  color: #B71C1C;
+  color: #B9C4C9;
   font-weight: 800;
   padding-bottom: 4px;
 }

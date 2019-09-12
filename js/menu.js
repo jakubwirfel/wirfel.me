@@ -11,18 +11,18 @@ var particles = document.getElementById('particles-js');
 var nav = document.getElementsByClassName('nav')[0];
 
 link1.onmouseover = function () {
-    particles.style.backgroundColor = ('#00A4CCFF');
-    headerColor.style.color = ('#B71C1C');
+    particles.style.backgroundColor = ('#004D47');
+    headerColor.style.color = ('#B9C4C9');
     for (let i=0; i<navColor.length; i++) { 
-        navColor[i].style.color = "#B71C1C";
+        navColor[i].style.color = "#B9C4C9";
     }
     link2.style.opacity = ('0.5');
     link3.style.opacity = ('0.5');
     for (let i=0; i<footerColor.length; i++) { 
-        footerColor[i].style.color = "#B71C1C";
+        footerColor[i].style.color = "#B9C4C9";
     }
     for (let i=0; i<dashColor.length; i++) { 
-        dashColor[i].style.backgroundColor = "#B71C1C";
+        dashColor[i].style.backgroundColor = "#B9C4C9";
     }
 }
 link2.onmouseover = function () {
