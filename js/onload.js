@@ -43,4 +43,19 @@ workload = function () {
 
 contactload = function () {
     particles.style.backgroundColor = ('#EC8B5E');
+    sidebar_link.style.color = ('#141A46');
+    sidebar_link.style.borderColor = ('#141A46');
+    sidebar_owner.style.color = ('#141A46');
+    sidebar_name.style.color = ('#141A46');
+
+    sidebar_link.onmouseover = function () {
+        sidebar_link.style.backgroundColor = ('#141A46');
+        sidebar_link.style.borderColor = ('#fff');
+        sidebar_link.style.color = ('#fff');
+    }
+    sidebar_link.onmouseout= function () {
+        sidebar_link.style.backgroundColor = ('transparent');
+        sidebar_link.style.borderColor = ('#141A46');
+        sidebar_link.style.color = ('#141A46');
+    }
  }

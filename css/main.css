@@ -17,6 +17,46 @@ canvas {
   display: block;
 }
 
+.main {
+  height: auto;
+  width: 100%;
+  margin-top: 75px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 560px) {
+  .main {
+    margin-top: 0%;
+  }
+}
+@media (min-width: 992px) {
+  .main {
+    right: 0;
+    width: 80%;
+    margin-top: 30%;
+  }
+}
+@media (min-width: 1500px) {
+  .main {
+    right: 0;
+    width: 80%;
+    margin-top: 10%;
+  }
+}
+
+.main_container {
+  height: auto;
+  width: 90%;
+}
+@media (min-width: 992px) {
+  .main_container {
+    height: auto;
+    width: 80%;
+  }
+}
+
 /* =============================================================================
    HTML5 CSS Reset Minified - Eric Meyer
    ========================================================================== */
@@ -1052,47 +1092,6 @@ li {
   position: relative;
 }
 
-.main {
-  height: auto;
-  width: 100%;
-  margin-top: 75px;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@media (min-width: 560px) {
-  .main {
-    margin-top: 0%;
-  }
-}
-@media (min-width: 992px) {
-  .main {
-    right: 0;
-    width: 80%;
-    margin-top: 30%;
-  }
-}
-@media (min-width: 1500px) {
-  .main {
-    right: 0;
-    width: 80%;
-    margin-top: 10%;
-  }
-}
-
-.main_container {
-  height: auto;
-  width: 90%;
-  color: #B9C4C9;
-}
-@media (min-width: 992px) {
-  .main_container {
-    height: auto;
-    width: 80%;
-  }
-}
-
 .about_me {
   height: 90vh;
   width: 100%;
@@ -1156,6 +1155,7 @@ li {
 
 .author {
   padding-top: 10px;
+  color: #B9C4C9;
 }
 .author p {
   font-size: 1em;
@@ -1287,6 +1287,7 @@ li {
 
 .aside_container {
   padding-bottom: 50px;
+  color: #B9C4C9;
 }
 @media (min-width: 992px) {
   .aside_container {
@@ -1318,6 +1319,73 @@ li {
   text-decoration: underline;
   color: #000;
   font-weight: 900;
+}
+
+.walkthrough {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  grid-gap: 0px;
+  position: relative;
+  top: 75px;
+}
+
+.walkthrough_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 0px;
+}
+
+.walkthrough_num {
+  padding: 10px;
+  transform: rotate(90deg);
+  font-weight: 900;
+  font-size: 0.8em;
+  color: #141A46;
+}
+
+.walkthrough_arrow {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  font-size: 1.4em;
+  color: #141A46;
+}
+
+.walkthrough_content {
+  font-size: 1.2em;
+  color: #141A46;
+}
+
+.offer {
+  height: auto;
+  width: 100%;
+  position: relative;
+  top: 150px;
+}
+.offer::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #141A46;
+  position: absolute;
+  top: -20px;
+}
+
+.proffer {
+  width: 100%;
+  height: auto;
+}
+.proffer h1 {
+  font-size: 1.2em;
+  color: #141A46;
 }
 
 /*# sourceMappingURL=main.css.map */
