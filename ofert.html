@@ -24,7 +24,7 @@
                        <div class="walkthrough_container">
                             <div class="walkthrough_num">01</div>
                             <div class="walkthrough_content">
-                                 <h1>Rozmowa z klientem</h1>
+                                 <a href="#client">Rozmowa z klientem</a>
                             </div>
                        </div>
                        <div class="walkthrough_arrow">
@@ -33,7 +33,7 @@
                        <div class="walkthrough_container">
                             <div class="walkthrough_num">02</div>
                             <div class="walkthrough_content">
-                                 <h1>Stworzenie projektu</h1>
+                                 <a>Stworzenie projektu</a>
                             </div>
                        </div>
                        <div class="walkthrough_arrow">
@@ -42,7 +42,7 @@
                        <div class="walkthrough_container">
                             <div class="walkthrough_num">03</div>
                             <div class="walkthrough_content">
-                                    <h1>Stworzenie strony internetowej od podstaw</h1>
+                                    <a>Stworzenie strony internetowej od podstaw</a>
                             </div>
                        </div>
                        <div class="walkthrough_arrow">
@@ -51,7 +51,7 @@
                        <div class="walkthrough_container">
                             <div class="walkthrough_num">04</div>
                             <div class="walkthrough_content">
-                                    <h1>Osadzenie strony na hostingu klienta</h1>
+                                    <a>Osadzenie strony na hostingu klienta</a>
                             </div>
                        </div>
                    </section>
@@ -59,11 +59,48 @@
                     <div class="proffer">
                         <h1>Priorytetem jest dla mnie dobra komunikacja i wzajemne zrozumienie się z klientem.<br><br>Dzięki temu strony, które wykonuje w 100% są podpożądkowane założeniom moich zleceniodawców.</h1>
                     </div>
+                    <div class="aside" id="client">
+                         <div class="aside_title">
+                              <h1>Rozpoczęcie współpracy</h1>
+                         </div>
+                         <div class="aside_content">
+                              <p>
+                                   Nasza współpraca zacznie się od ustalenia jakie funkcje ma spełniać twoja strona. Podzielimy się pomysłami jakie mamy na tą witrynę. <br><br>Najardziej zależy mi na wzajemnym zrozumieniu się, ponieważ uważam, że to podstawa do stworzenia genialnej strony internetowej z której obie strony będą zadowolone. 
+                                   <br><br>Jeśli chodzi o wycenę oraz kontakt ze mną to znajdziesz to pod tym linkiem</p>
+                              </p>
+                         </div>
+                         <div class="aside_button_box">
+                              <div class="aside_button">
+                                   <a>Kontakt</a>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="aside">
+                              <div class="aside_title">
+                                   <h1>Na początek projekt</h1>
+                              </div>
+                              <div class="aside_content">
+                                   <p>
+                                        
+                                   </p>
+                              </div>
+                         </div>
                    </section>
                </div>
             </main>
     <script type="text/javascript" src="js/particles.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/onload.js"></script>
+    <script type="text/javascript">
+     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+     anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+               behavior: 'smooth'
+          });
+          });
+     });
+     </script>
 </body>
 </html>
