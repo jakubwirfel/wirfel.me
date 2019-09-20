@@ -59,13 +59,16 @@
                     <div class="proffer">
                         <h1>Priorytetem jest dla mnie dobra komunikacja i wzajemne zrozumienie się z klientem.<br><br>Wszelkie informacje kontaktowe znajdziesz klikając ten przycisk.</h1>
                         <div class="aside_button_box">
-                         <div class="aside_button">
-                              <a>Kontakt</a>
+                              <button class="aside_button trigger" data-modal-trigger="trigger-1" >
+                                   <a>Kontakt</a>
+                              </button>
+                              <div class="aside_button">
+                                   <a>Wycena</a>
+                              </div>
                          </div>
                     </div>
-                    </div>
                     <div class="aside" id="client">
-                         <div class="aside_title">
+                         <div class="aside_title">  
                               <h1>Rozpoczęcie współpracy</h1>
                          </div>
                          <div class="aside_content">
@@ -117,10 +120,25 @@
                      <div class="arrow_box"><a href="#contact"><i class="fas fa-arrow-circle-up"></i></a></div>
                    </section>
                </div>
+               <div data-modal="trigger-1" class="modal">
+                    <article class="content-wrapper">
+                         <button class="close"></button>
+                         <header class="modal-header">
+                              <h2>Skontaktujesz się ze mną przez ten formularz</h2>
+                         </header>
+                         <div class="content">
+                              <p>Możesz również napisać do mnie na LinkedIn oraz Facebook'u.</p>
+                              <form name="form" role="form" class="clearfix" onSubmit="return checkForm()" class="form-offert" action="php/sendforfirm.php" method="post" > 
+                                         
+                              </form>
+                         </div>
+                    </article>
+               </div>
             </main>
     <script type="text/javascript" src="js/particles.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/onload.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
     <script type="text/javascript">
      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
      anchor.addEventListener('click', function (e) {
