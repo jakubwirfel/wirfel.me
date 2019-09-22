@@ -128,8 +128,22 @@
                          </header>
                          <div class="content">
                               <p>Możesz również napisać do mnie na LinkedIn oraz Facebook'u.</p>
-                              <form name="form" role="form" class="clearfix" onSubmit="return checkForm()" class="form-offert" action="php/sendforfirm.php" method="post" > 
-                                         
+                              <form name="form" role="form" class="clearfix" onSubmit="return checkForm()" action="php/sendforfirm.php" method="post" > 
+                                   <label class="lab">Adres Email</label>
+                                   <input type="email"  name="email" id="email" class="email"/>
+                                   <p>Proszę, wypełnij to pole</p>
+                                   <label class="lab">Jakie masz do mnie pytanie?</label>
+                                   <textarea name="details" id="details" class="details"></textarea>
+                                   <p>Proszę, wypełnij to pole</p>
+                                   <h2 class="permission"> 
+                                        Zobowiązuje się przetwarzać powyższe informacje, aby skontaktować się z Tobą i porozmawiać o Twoim projekcie. Jeśli wyrażasz zgodę na skontaktowanie się z Tobą w tym celu, proszę zaznaczyć poniżej:
+                                   </h2>
+                                   <input class="inp-cbx" id="cbx" type="checkbox" style="display: none;" name="agree" value="agree"/>
+                                   <label class="cbx" for="cbx"><span>
+                                   <svg width="12px" height="10px" viewbox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                   </svg></span><span>Wyrażam zgodę na rozmowęo moim projekcie</span></label>
+                                   <input class="submit" type="submit" value="Wyślij"/>
                               </form>
                          </div>
                     </article>
