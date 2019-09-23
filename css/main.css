@@ -484,6 +484,11 @@ form .email, form .details {
   font-size: 1.1em;
   padding: 10px;
 }
+@media (min-width: 992px) {
+  form .email, form .details {
+    border-bottom: solid 1px #EC8B5E;
+  }
+}
 form .email {
   height: 30px;
 }
@@ -504,7 +509,7 @@ form .cbx span {
   display: inline-block;
   vertical-align: middle;
   transform: translate3d(0, 0, 0);
-  font-size: 0.6em;
+  font-size: 0.65em;
 }
 form .cbx span:first-child {
   position: relative;
@@ -574,6 +579,16 @@ form .submit {
   background-color: #141A46;
   border: none;
   padding: 5px;
+  cursor: pointer;
+}
+form .submit:hover {
+  background-color: #EC8B5E;
+  transform: scale(1.2);
+  transition: all 0.3s ease-out;
+}
+form .submit:not(:hover) {
+  transform: scale(1);
+  transition: all 0.3s ease-out;
 }
 
 .nav {
@@ -743,7 +758,14 @@ form .submit {
   transform: scale(0);
   transition: transform 0.25s;
   transition-delay: 0.15s;
-  overflow: scroll;
+  overflow: auto;
+}
+@media (min-width: 992px) {
+  .modal .content-wrapper {
+    background-color: whitesmoke;
+    width: 50%;
+    height: auto;
+  }
 }
 .modal .content-wrapper .close {
   position: absolute;
@@ -758,6 +780,7 @@ form .submit {
   background-color: transparent;
   font-size: 1.5rem;
   transition: 0.25s linear;
+  cursor: pointer;
 }
 .modal .content-wrapper .close:before, .modal .content-wrapper .close:after {
   position: absolute;
@@ -776,7 +799,12 @@ form .submit {
   transform: rotate(360deg);
 }
 .modal .content-wrapper .close:hover:before, .modal .content-wrapper .close:hover:after {
-  background-color: #EC8B5E;
+  background-color: whitesmoke;
+}
+@media (min-width: 992px) {
+  .modal .content-wrapper .close:hover:before, .modal .content-wrapper .close:hover:after {
+    background-color: #EC8B5E;
+  }
 }
 .modal .content-wrapper .modal-header {
   position: relative;
@@ -1549,7 +1577,7 @@ form .submit {
 @media (min-width: 992px) {
   .walkthrough {
     width: 80%;
-    top: -50px;
+    top: -100px;
   }
 }
 @media (min-width: 1500px) {
@@ -1635,6 +1663,12 @@ form .submit {
 @media (min-width: 992px) {
   .offer {
     width: 80%;
+    top: 50px;
+  }
+}
+@media (min-width: 1500px) {
+  .offer {
+    width: 80%;
     top: 275px;
   }
 }
@@ -1667,7 +1701,7 @@ form .submit {
 
 .aside_title {
   color: #141A46;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   width: 100%;
 }
 .aside_title::after {

@@ -1,7 +1,6 @@
 $base-duration: 0.25s;
 
-$accent: #EC8B5E;
-$white: whitesmoke;
+$accent: whitesmoke;
 
 .modal {
 	position: fixed;
@@ -41,7 +40,12 @@ $white: whitesmoke;
 		transform: scale(0.0);
 		transition: transform $base-duration;
 		transition-delay: 0.15s;
-		overflow: scroll;
+		overflow: auto;
+		@include respond-to(medium) {
+			background-color: whitesmoke;
+			width: 50%;
+			height: auto;
+		}
 		.close {
 			position: absolute;
 			top: 0.5rem;
@@ -55,7 +59,7 @@ $white: whitesmoke;
 			background-color: transparent;
 			font-size: 1.5rem;
 			transition: $base-duration linear;
-			
+			cursor: pointer;
 			&:before, &:after {
 				position: absolute;
 				content: '';
@@ -77,6 +81,9 @@ $white: whitesmoke;
 				
 				&:before, &:after {
 					background-color: $accent;
+					@include respond-to(medium) {
+						background-color: #EC8B5E;
+					}
 				}
 			}
 		}

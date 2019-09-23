@@ -19,6 +19,9 @@ form {
         border-right: none; 
         font-size: 1.1em;
         padding: 10px;
+        @include respond-to(medium) {
+          border-bottom: solid 1px #EC8B5E;
+        }
     }
     .email {
         height: 30px;
@@ -41,7 +44,7 @@ form {
         display: inline-block;
         vertical-align: middle;
         transform: translate3d(0, 0, 0);
-        font-size: 0.6em;
+        font-size: 0.65em;
       }
       .cbx span:first-child {
         position: relative;
@@ -113,5 +116,15 @@ form {
         background-color: #141A46;
         border: none;
         padding: 5px;
+        cursor: pointer;
+        &:hover {
+          background-color: #EC8B5E;
+          transform: scale(1.2);
+          transition: all 0.3s ease-out;
+        }
+        &:not( :hover) {
+          transform: scale(1);
+          transition: all 0.3s ease-out;
+        }
     }
 }
