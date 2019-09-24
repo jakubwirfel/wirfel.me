@@ -62,9 +62,9 @@
                               <button class="aside_button trigger" data-modal-trigger="trigger-1" >
                                    <a>Kontakt</a>
                               </button>
-                              <div class="aside_button">
+                              <button class="aside_button trigger" data-modal-trigger="trigger-2">
                                    <a>Wycena</a>
-                              </div>
+                              </button>
                          </div>
                     </div>
                     <div class="aside" id="client">
@@ -148,6 +148,82 @@
                          </div>
                     </article>
                </div>
+               <div data-modal="trigger-2" class="modal">
+                    <article class="content-wrapper">
+                         <button class="close"></button>
+                         <header class="modal-header">
+                              <h2>Wycena strony internetowej</h2>
+                         </header>
+                         <div class="content">
+                              <p>Za pośrednictwem tego formularza mogę wycenić dla ciebie twoją przyszłą stronę internetową. Informacja zwrotna zostanie wysłana na maila.</p>
+                              <form name="form" role="form" class="clearfix" onSubmit="return checkForm()" method="post" > 
+                                   <section class="chooser">
+                                        <h1>Czym jesteś zainteresowany?</h1>
+                                        <p>(Możesz wybrać więcej niż jedną opcje)</p>
+                                        <ul>
+                                            <li>
+                                                <button type="button" class="chooser_button">
+                                                    <div>Strona internetowa</div>
+                                                    <img src="assets/website.svg"/>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="chooser_button">
+                                                    <div>Sklep internetowy</div>
+                                                    <img src="assets/store.svg"/>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="chooser_button">
+                                                    <div>Portal internetowy</div>
+                                                    <img src="assets/portal.svg"/>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="chooser_button">
+                                                    <div>Aplikacja webowa</div>
+                                                    <img src="assets/webapp.svg"/>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                   </section>
+                                   <section class="website">
+                                        <h1>System CMS</h1>
+                                        <div class="cms_button">
+                                             <input id="toggle-on" class="toggle toggle-left" name="toggle" value="false" type="radio" checked>
+                                             <label for="toggle-on" class="btn">Tak</label>
+                                             <input id="toggle-off" class="toggle toggle-right" name="toggle" value="true" type="radio">
+                                             <label for="toggle-off" class="btn">Nie</label>
+                                        </div>
+                                        <p>Strona www z panelem do zarządzania treścią</p>
+                                        <h1>Orientacyjna liczba podstron</h1>
+                                        <div class="container">
+  
+                                             <div class="range-slider">
+                                                  <span id="rs-bullet" class="rs-label">0</span>
+                                                  <input id="rs-range-line" class="rs-range" type="range" value="0" min="0" max="50">
+                                                    
+                                             </div>
+                                                  
+                                             <div class="box-minmax">
+                                                  <span>0</span><span>50</span>
+                                             </div>
+                                                  
+                                        </div>
+                                   </section>
+                                   <h2 class="permission"> 
+                                        Zobowiązuje się przetwarzać powyższe informacje, aby skontaktować się z Tobą i porozmawiać o Twoim projekcie. Jeśli wyrażasz zgodę na skontaktowanie się z Tobą w tym celu, proszę zaznaczyć poniżej:
+                                   </h2>
+                                   <input class="inp-cbx" id="cbx" type="checkbox" style="display: none;" name="agree" value="agree"/>
+                                   <label class="cbx" for="cbx"><span>
+                                   <svg width="12px" height="10px" viewbox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                   </svg></span><span>Wyrażam zgodę na rozmowęo moim projekcie</span></label>
+                                   <input class="submit" type="submit" value="Wyślij"/>
+                              </form>
+                         </div>
+                    </article>
+               </div>
             </main>
     <script type="text/javascript" src="js/particles.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
@@ -163,6 +239,18 @@
           });
           });
      });
+     </script>
+     <script type="text/javascript">
+     var rangeSlider = document.getElementById("rs-range-line");
+     var rangeBullet = document.getElementById("rs-bullet");
+
+     rangeSlider.addEventListener("input", showSliderValue, false);
+
+     function showSliderValue() {
+     rangeBullet.innerHTML = rangeSlider.value;
+     var bulletPosition = (rangeSlider.value /rangeSlider.max);
+     }
+
      </script>
 </body>
 </html>

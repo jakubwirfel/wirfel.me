@@ -14,7 +14,7 @@ function modalEvent(button) {
 		const close = modal.querySelector('.close');
 
 		close.addEventListener('click', () => modal.classList.remove('open'));
-		close.addEventListener('click', () =>html.style.overflow = ('inherit'));
+		close.addEventListener('click', () => html.style.overflow = ('inherit'));
 		modal.addEventListener('click', () => modal.classList.remove('open'));
 		contentWrapper.addEventListener('click', (e) => e.stopPropagation());
 
