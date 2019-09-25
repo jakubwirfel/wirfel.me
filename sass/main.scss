@@ -5,8 +5,11 @@
 @import 'components/particles';
 @import 'components/links';
 @import 'components/aniamtions.scss';
-@import 'components/form';
+@import 'components/agree_button';
+@import 'components/cms_button';
+@import 'components/range_button';
 
+@import 'layout/form';
 @import 'layout/navigation';
 @import 'layout/sidebar';
 @import 'layout/modal';

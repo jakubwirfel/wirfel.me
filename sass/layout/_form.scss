@@ -1,0 +1,134 @@
+form {
+    display: flex;
+    flex-direction: column;
+    color: #141A46;
+    padding-top: 50px;
+    .lab {
+        padding: 10px 0px;
+        font-weight: bold;
+        &:nth-child(3) {
+            padding-top: 20px;
+        }
+    }
+    .email, .details {
+        height: 100px;
+        background-color: transparent;
+        border-bottom: solid 1px white;
+        border-left: none;
+        border-top: none;
+        border-right: none; 
+        font-size: 1.1em;
+        padding: 10px;
+        @include respond-to(medium) {
+          border-bottom: solid 1px #EC8B5E;
+        }
+    }
+    .email {
+        height: 30px;
+        
+    }
+    .permission {
+        line-height: 15px;
+        font-size: 0.8em;
+        font-weight: unset;
+        padding: 10px 0px;
+    }
+    .submit {
+        margin: auto;
+        margin-top: 20px;
+        width: 200px;
+        font-size: 1.2em;
+        color: #FFFFFF;
+        background-color: #141A46;
+        border: none;
+        padding: 5px;
+        cursor: pointer;
+        &:hover {
+          background-color: #EC8B5E;
+          transform: scale(1.2);
+          transition: all 0.3s ease-out;
+        }
+        &:not( :hover) {
+          transform: scale(1);
+          transition: all 0.3s ease-out;
+        }
+    }
+}
+.chooser {
+  height: auto;
+  width: 100%;
+  padding-bottom: 50px;
+  li {
+    display: inline-block;
+  }
+  h1 {
+    font-size: 1.5rem;
+		font-weight: bold;
+    color: #141A46;
+    padding-bottom: 10px;
+  }
+  p {
+    padding-bottom: 20px;
+  }
+  @include respond-to(medium) {
+    width: 90%;
+    text-align: left;
+  }
+  @include respond-to(large) {
+    width: 60%;
+    text-align: left;
+  }
+}
+.chooser_button {
+  width: 120px;
+  height:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 10px;
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.7s ease-out;
+  }
+  div {
+    font-size: 0.875em;
+		line-height: 1;
+		color: #141A46;
+    padding-bottom: 4px;
+    font-weight: bold;
+    @include respond-to(large) {
+      font-size: 1em;
+    }
+  }
+  img {
+    width: 90px;
+    height: 90px;
+    padding-top: 5px;
+    @include respond-to(large) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+.website {
+  height: auto;
+  width: 100%;
+  h1 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+}
+.url {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  border-bottom: #FFFFFF solid 1px;
+  font-size: 1.1em;
+}
