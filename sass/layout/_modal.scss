@@ -18,7 +18,7 @@ $accent: whitesmoke;
 		position: fixed;
 		width: 100%;
 		height: 100vh;
-		background-color: rgba(0,0,0,0.5);
+		background-color: rgba(0,0,0,0.7);
 		transition: background-color $base-duration;
 		> .content-wrapper {
 			transform: scale(1.0);

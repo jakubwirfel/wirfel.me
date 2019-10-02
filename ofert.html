@@ -178,11 +178,11 @@
                                         </div>
                                         <h1>Dodatkowe wersje językowe</h1>
                                         <input class="inp-cbx" id="cbx_2" type="checkbox" style="display: none;" name="agree" value="agree"/>
-                                        <label class="cbx" for="cbx_2"><span>
+                                        <label class="cbx" for="cbx_2" id="range_toogle"><span>
                                         <svg width="12px" height="10px" viewbox="0 0 12 10">
                                              <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
                                         </svg></span></label>
-                                        <div class="container_range">
+                                        <div class="container_range toogle">
                                              <div class="label"><span id="rs-bullet" class="rs-label">0</span></div>
                                              <div class="range-slider">
                                                   <input id="rs-range-line" class="rs-range" type="range" value="0" min="0" max="10">
@@ -246,6 +246,8 @@
           var bulletPosition = (rangeSlider[i].value /rangeSlider[i].max);
           }
      }
+     </script>
+     <script type="text/javascript">
      </script>
 </body>
 </html>

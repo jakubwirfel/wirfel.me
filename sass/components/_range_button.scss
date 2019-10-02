@@ -15,11 +15,17 @@
     span {
       padding-left: 10px;
     }
+    @include respond-to(medium) {
+      width: 500px;
+    }
   }
   .rs-range {
     margin-top: 29px;
     width: 200px;
     -webkit-appearance: none;
+    @include respond-to(medium) {
+      width: 400px;
+    }
     &:focus {
         outline: none;
     }
@@ -31,6 +37,9 @@
         background: #ffffff;
         border-radius: 0px;
         border: 0px solid #010101;
+        @include respond-to(medium) {
+          background: #EC8B5E;
+        }
     }
     &::-moz-range-track {
         width: 100%;
@@ -40,6 +49,9 @@
         background: #ffffff;
         border-radius: 0px;
         border: 0px solid #010101;
+        @include respond-to(medium) {
+          background: #EC8B5E;
+        }
     }
   
     &::-webkit-slider-thumb {
@@ -87,6 +99,9 @@
     font-weight: normal;
     line-height: normal;
     font-size: 20px;
+    @include respond-to(medium) {
+      color: #EC8B5E;
+    }
   }
   .label {
     width: 100%;
