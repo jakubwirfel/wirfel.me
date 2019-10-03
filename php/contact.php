@@ -5,7 +5,7 @@
    
     $zawartosc_email = "Adres email nadawcy: <br/><b>".$email."</b><br/><br/>Wiadomość: <br/><b>".$details."</b>";                                   
 
-    $adres_do = "kontakt@jakub.dx.am";
+    $adres_do = "jakubwirfel@gmail.com";
     $adres_od = $email;
 
     $headers  = 'MIME-Version: 1.0' . "\r\n";
