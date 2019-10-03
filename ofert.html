@@ -128,17 +128,17 @@
                          </header>
                          <div class="content">
                               <p>Możesz również napisać do mnie na LinkedIn oraz Facebook'u.</p>
-                              <form name="form" role="form" class="clearfix" onSubmit="return checkForm()" action="php/sendforfirm.php" method="post" > 
+                              <form name="form" role="form" class="clearfix" action="php/contact.php" method="post" > 
                                    <label class="lab">Adres Email</label>
-                                   <input type="email"  name="email" id="email" class="email"/>
+                                   <input type="email"  name="email" id="email" class="email" required/>
                                    <p>Proszę, wypełnij to pole</p>
                                    <label class="lab">Jakie masz do mnie pytanie?</label>
-                                   <textarea name="details" id="details" class="details"></textarea>
+                                   <textarea name="details" id="details" class="details" required></textarea>
                                    <p>Proszę, wypełnij to pole</p>
                                    <h2 class="permission"> 
                                         Zobowiązuje się przetwarzać powyższe informacje, aby skontaktować się z Tobą i porozmawiać o Twoim projekcie. Jeśli wyrażasz zgodę na skontaktowanie się z Tobą w tym celu, proszę zaznaczyć poniżej:
                                    </h2>
-                                   <input class="inp-cbx" id="cbx" type="checkbox" style="display: none;" name="agree" value="agree"/>
+                                   <input class="inp-cbx" id="cbx" type="checkbox" style="display: none;" name="agree" value="agree" required/>
                                    <label class="cbx" for="cbx"><span>
                                    <svg width="12px" height="10px" viewbox="0 0 12 10">
                                         <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
@@ -156,13 +156,15 @@
                          </header>
                          <div class="content">
                               <p>Za pośrednictwem tego formularza mogę wycenić dla ciebie twoją przyszłą stronę internetową. Informacja zwrotna zostanie wysłana na maila.</p>
-                              <form name="form" role="form" class="clearfix" onSubmit="return checkForm()" method="post" > 
+                              <form name="form" role="form" class="clearfix" method="post"  action="php/wycena.php"> 
                                    <section class="website" id="website_section">
+                                        <label class="lab">Adres Email</label>
+                                        <input type="email"  name="email" id="email" class="email" required/>
                                         <h1>System CMS</h1>
                                         <div class="cms_button">
-                                             <input id="toggle-on" class="toggle toggle-left" name="toggle" value="false" type="radio" checked>
+                                             <input id="toggle-on" class="toggle toggle-left" name="toggle" value="TAK" type="radio" checked>
                                              <label for="toggle-on" class="btn">Tak</label>
-                                             <input id="toggle-off" class="toggle toggle-right" name="toggle" value="true" type="radio">
+                                             <input id="toggle-off" class="toggle toggle-right" name="toggle" value="NIE" type="radio">
                                              <label for="toggle-off" class="btn">Nie</label>
                                         </div>
                                         <p>Strona www z panelem do zarządzania treścią</p>
@@ -170,37 +172,37 @@
                                         <div class="container_range">
                                              <div class="label"><span id="rs-bullet" class="rs-label">0</span></div>
                                              <div class="range-slider">
-                                                  <input id="rs-range-line" class="rs-range" type="range" value="0" min="0" max="20">
+                                                  <input id="rs-range-line" name="range_www" class="rs-range" type="range" value="0" min="0" max="20" required>
                                              </div>
                                              <div class="box-minmax">
                                                   <span>0</span><span>20</span>
                                              </div>
                                         </div>
                                         <h1>Dodatkowe wersje językowe</h1>
-                                        <input class="inp-cbx" id="cbx_2" type="checkbox" style="display: none;" name="agree" value="agree"/>
+                                        <input class="inp-cbx" id="cbx_2" type="checkbox" style="display: none;" name="lang" value="TAK"/>
                                         <label class="cbx" for="cbx_2" id="range_toogle"><span>
                                         <svg width="12px" height="10px" viewbox="0 0 12 10">
                                              <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
                                         </svg></span></label>
-                                        <div class="container_range toogle">
+                                        <div class="container_range" id="myDIV">
                                              <div class="label"><span id="rs-bullet" class="rs-label">0</span></div>
                                              <div class="range-slider">
-                                                  <input id="rs-range-line" class="rs-range" type="range" value="0" min="0" max="10">
+                                                  <input id="rs-range-line" class="rs-range" type="range" value="0" min="0" max="10" name="range_lang">
                                              </div>
                                              <div class="box-minmax">
                                                   <span>0</span><span>10</span>
                                              </div>
                                         </div>
                                         <h1>Adres aktualnej strony internetowej (jeśli posiadasz)</h1>
-                                        <input type="url" class="url" id="url" name="url"/>
+                                        <input type="url" class="url" id="url" name="url_website"/>
                                         <h1>Linki do stron, które Ci się podobają</h1>
-                                        <input type="text" class="url" id="url" name="url"/>
-                                        <input type="text" class="url" id="url" name="url"/>
+                                        <input type="text" class="url" id="url" name="url_liked1"/>
+                                        <input type="text" class="url" id="url" name="url_liked2"/>
                                         <h1>Czy mam zredagować treści na twoją stronę www?</h1>
                                         <div class="cms_button">
-                                             <input id="toggle-on2" class="toggle toggle-left" name="toggle2" value="false" type="radio" checked>
+                                             <input id="toggle-on2" class="toggle toggle-left" name="toggle2" value="TAK" type="radio" checked>
                                              <label for="toggle-on2" class="btn">Tak</label>
-                                             <input id="toggle-off2" class="toggle toggle-right" name="toggle2" value="true" type="radio">
+                                             <input id="toggle-off2" class="toggle toggle-right" name="toggle2" value="NIE" type="radio">
                                              <label for="toggle-off2" class="btn">Nie</label>
                                         </div>
                                    </section>
@@ -208,12 +210,12 @@
                                    <h2 class="permission"> 
                                         Zobowiązuje się przetwarzać powyższe informacje, aby skontaktować się z Tobą i porozmawiać o Twoim projekcie. Jeśli wyrażasz zgodę na skontaktowanie się z Tobą w tym celu, proszę zaznaczyć poniżej:
                                    </h2>
-                                   <input class="inp-cbx" id="cbx_3" type="checkbox" style="display: none;" name="agree" value="agree"/>
+                                   <input class="inp-cbx" id="cbx_3" type="checkbox" style="display: none;" name="agree" value="agree" required/>
                                    <label class="cbx" for="cbx_3"><span>
                                    <svg width="12px" height="10px" viewbox="0 0 12 10">
                                         <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
                                    </svg>
-                                   </span><span>Wyrażam zgodę na rozmowęo moim projekcie</span>
+                                   </span><span>Wyrażam zgodę na rozmowę o moim projekcie</span>
                                    </label>
                                    <input class="submit" type="submit" value="Wyślij"/>
                               </form>
@@ -248,6 +250,15 @@
      }
      </script>
      <script type="text/javascript">
+     var button = document.getElementById('cbx_2');
+          button.addEventListener('click', () => {
+          var x = document.getElementById("myDIV");
+          if (x.style.display === "flex") {
+          x.style.display = "none";
+          } else {
+          x.style.display = "flex";
+          }
+	});
      </script>
 </body>
 </html>

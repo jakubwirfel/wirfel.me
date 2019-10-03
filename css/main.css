@@ -606,6 +606,10 @@ input[type=radio].toggle:checked + label:after {
   padding-bottom: 10px;
 }
 
+#myDIV {
+  display: none;
+}
+
 .box-minmax {
   margin-top: 30px;
   width: 100%;
