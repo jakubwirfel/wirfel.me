@@ -65,9 +65,17 @@
     <script type="text/javascript">
         var image = document.getElementById('image');
         var width = window.innerWidth;  
-
         if (width >= 560) {
             image.src = 'assets/fotowoltaika1.png';
+        }else { 
+            window.addEventListener("resize", function(event) {
+            if (document.body.clientWidth >= 560) {
+            image.src = 'assets/fotowoltaika1.png';
+            } else {
+                image.src = 'assets/fotowoltaika2.png';
+            }
+            console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight+' high');
+            })
         }
     </script>
 </body>

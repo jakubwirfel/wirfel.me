@@ -63,9 +63,17 @@
     <script type="text/javascript">
         var image = document.getElementById('image');
         var width = window.innerWidth;  
-
         if (width >= 560) {
             image.src = 'assets/Ogrodnictwo2.png';
+        }else { 
+            window.addEventListener("resize", function(event) {
+            if (document.body.clientWidth >= 560) {
+            image.src = 'assets/Ogrodnictwo2.png';
+            } else {
+                image.src = 'assets/Ogrodnictwo3.png';
+            }
+            console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight+' high');
+            })
         }
     </script>
 </body>
